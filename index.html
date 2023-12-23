@@ -48,5 +48,15 @@
     <div id="output"></div>
 
     <script src='script.js'></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var video = document.getElementById('myVideo');
+
+            video.addEventListener('error', function (event) {
+                console.error('Error loading the video:', event);
+            });
+        });
+    </script>
 </body>
 </html>
