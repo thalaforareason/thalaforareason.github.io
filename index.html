@@ -1,14 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>THALA #7</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='script.js'></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        h2, form, #output {
+            text-align: center;
+            color: #fff;
+            z-index: 1;
+        }
+    </style>
 </head>
 <body>
+    <video autoplay muted loop id="myVideo">
+        <source src="your-video-file.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <h2>Input Form</h2>
     <form>
         <label for="userInput">Enter Your Input :</label>
@@ -16,6 +46,7 @@
         <button type="button" onclick="checkInput()">Check</button>
     </form>
     <div id="output"></div>
-                    
+
+    <script src='script.js'></script>
 </body>
 </html>
